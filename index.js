@@ -10,7 +10,7 @@ let currentDir = homedir()
 
 function init() {
     const nameArg = process.argv.filter(arg => /^--name/.test(arg))
-    const username = nameArg ? nameArg[0].split("=")[1] : "user"
+    const username = nameArg[0] ? nameArg[0].split("=")[1] : "user"
     console.log(`Welcome to the File Manager, ${username}!`);
     console.log(`You are currently in ${currentDir}`);
     process.on("exit", () => {
