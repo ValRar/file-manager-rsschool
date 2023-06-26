@@ -226,6 +226,7 @@ function osHandler(argv) {
             break
         case "--architecture":
             console.log(os.arch())
+            break
         default:
             console.log("Invalid input")
             break
