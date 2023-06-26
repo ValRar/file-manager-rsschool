@@ -48,7 +48,7 @@ function resolveInput(input) {
             renameFile(argv)
             break
         case "cp":
-            fileCopy(argv)
+            copyFile(argv)
             break 
         case "mv":
             moveFile(argv)
@@ -160,7 +160,7 @@ function renameFile(argv) {
     })
 }
 
-function fileCopy(argv) {
+function copyFile(argv) {
     if (!argv[0] || !argv[1]) {
         console.log("Invalid input")
         return
