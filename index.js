@@ -16,7 +16,6 @@ function init() {
         console.log(`Thank you for using File Manager, ${username}, goodbye!`)
     })
     process.on("SIGINT", () => {
-        console.log(`Thank you for using File Manager, ${username}, goodbye!`)
         process.exit()
     })
     process.stdin.on("data", (data) => {
