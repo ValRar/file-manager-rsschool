@@ -9,7 +9,8 @@ import { pipeline } from "stream";
 let currentDir = homedir()
 
 function init() {
-    const username = process.argv.filter(arg => /^--name/.test(arg))[0].split("=")[1]
+    const nameArg = process.argv.filter(arg => /^--name/.test(arg))
+    const username = nameArg ? nameArg[0].split("=")[1] : "user"
     console.log(`Welcome to the File Manager, ${username}!`);
     console.log(`You are currently in ${currentDir}`);
     process.on("exit", () => {
